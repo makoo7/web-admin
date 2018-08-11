@@ -11,9 +11,15 @@
 |
 */
 
+/* front End Routes start */
+
 Route::get('/', function () {
     return view('front.index');
 });
+
+/* front End Routes ends */
+
+/* backend routes start */
 
 Auth::routes();
 
@@ -28,3 +34,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['admin']], function () {
 
 });
+
+/* backend routes ends */
