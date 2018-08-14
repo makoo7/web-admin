@@ -21,13 +21,14 @@ Route::get('/', function () {
 
 /* backend routes start */
 
-Auth::routes();
-
 Route::get('/admin/login', function(){
     return view('admin.index');
 });
 
+Auth::routes();
+
 Route::get('admin', array('as' => 'admin.get.login','uses' => 'AuthController@index'));
+Route::any('admin/forgotpassword', array('as' => 'admin.forgotpassword', 'uses' => 'AuthController@ForgotPassword'));
 
 Route::get('/home', 'HomeController@index')->name('home');
 
