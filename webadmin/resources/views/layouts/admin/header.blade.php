@@ -102,10 +102,10 @@
 															</div>
 															<div class="m-card-user__details">
 																<span class="m-card-user__name m--font-weight-500">
-																	Mark Andre
+																 	{{ Auth::user()->name }}
 																</span>
 																<a href="" class="m-card-user__email m--font-weight-300 m-link">
-																	mark.andre@gmail.com
+																	{{ Auth::user()->email }}
 																</a>
 															</div>
 														</div>
@@ -119,7 +119,7 @@
 																	</span>
 																</li>
 																<li class="m-nav__item">
-																	<a href="profile.html" class="m-nav__link">
+																	<a href="/profile" class="m-nav__link">
 																		<i class="m-nav__link-icon flaticon-profile-1"></i>
 																		<span class="m-nav__link-title">
 																			<span class="m-nav__link-wrap">

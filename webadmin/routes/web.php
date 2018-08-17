@@ -31,6 +31,7 @@ Route::get('admin', array('as' => 'admin.get.login','uses' => 'AuthController@in
 Route::any('admin/forgotpassword', array('as' => 'admin.forgotpassword', 'uses' => 'AuthController@ForgotPassword'));
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::any('profile','HomeController@profile')->name('profile');
 
 Route::group(['middleware' => ['admin']], function () {
 
