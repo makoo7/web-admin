@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('admin.home');
     }
 
     public function profile(Request $request){
@@ -36,17 +36,17 @@ class HomeController extends Controller
             $user->name = $request['name'];
             $user->save();
             if($user){
-                return view('profile');
+                return view('admin.profile');
             }
         }else{
-            return view('profile');
+            return view('admin.profile');
         }        
     }
 
     public function Testmonials(Request $request){
-        return view('testmonial.index');
+        return view('admin.testmonial.index');
     }
     public function AddTestmonials(Request $request){
-        return view('testmonial.add');
+        return view('admin.testmonial.add');
     }
 }

@@ -7,7 +7,7 @@
 					<div class="m-login__container">
 						<div class="m-login__logo">
 							<a href="javascript:;">
-								<img src="{{ asset('assets/demo/default/media/img/logo/fiststep_logo.png') }}">
+								<img src="{{ asset('admin/assets/demo/default/media/img/logo/fiststep_logo.png') }}">
 							</a>
 						</div>
 						<div class="m-login__signin">
