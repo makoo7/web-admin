@@ -226,6 +226,7 @@
 										<div class="tab-pane active" id="m_user_profile_tab_1">
 											<form class="m-form m-form--fit m-form--label-align-right" method="POST" action="{{ route('profile') }}">
 												<div class="m-portlet__body">
+														{{ csrf_field() }}
 													<div class="form-group m-form__group m--margin-top-10 m--hide">
 														<div class="alert m-alert m-alert--default" role="alert">
 															The example form below demonstrates common HTML form elements that receive updated styles from Bootstrap with additional classes.

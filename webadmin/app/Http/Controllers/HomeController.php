@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,25 @@ class HomeController extends Controller
     }
 
     public function profile(Request $request){
-        return view('profile');
+
+        if(count($request->all()) > 0){
+            $request = $request->all();
+            
+            $user = Auth::user();
+            $user->name = $request['name'];
+            $user->save();
+            if($user){
+                return view('profile');
+            }
+        }else{
+            return view('profile');
+        }        
+    }
+
+    public function Testmonials(Request $request){
+        return view('testmonial.index');
+    }
+    public function AddTestmonials(Request $request){
+        return view('testmonial.add');
     }
 }

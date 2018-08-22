@@ -17,7 +17,7 @@
 									</span>
 								</a>
 							</li>
-							<!-- <li class="m-menu__section">
+							<li class="m-menu__section">
 								<h4 class="m-menu__section-text">
 									Components
 								</h4>
@@ -27,7 +27,7 @@
 								<a  href="#" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon flaticon-layers"></i>
 									<span class="m-menu__link-text">
-										Base
+										Testmonials
 									</span>
 									<i class="m-menu__ver-arrow la la-angle-right"></i>
 								</a>
@@ -37,248 +37,32 @@
 										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
 											<span class="m-menu__link">
 												<span class="m-menu__link-text">
-													Base
+													Testmonials
 												</span>
 											</span>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/state.html" class="m-menu__link ">
+											<a  href="/testmonials" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
 												<span class="m-menu__link-text">
-													State Colors
+													Testmonials
 												</span>
 											</a>
 										</li>
 										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/typography.html" class="m-menu__link ">
+											<a  href="/testmonials/add" class="m-menu__link ">
 												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
 													<span></span>
 												</i>
 												<span class="m-menu__link-text">
-													Typography
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/stack.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Stack
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/tables.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Tables
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/progress.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Progress
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/modal.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Modal
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/alerts.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Alerts
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/popover.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Popover
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/tooltip.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Tooltip
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/blockui.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Block UI
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/spinners.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Spinners
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/scrollable.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Scrollable
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/dropdown.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Dropdown
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
-											<a  href="#" class="m-menu__link m-menu__toggle">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Tabs
-												</span>
-												<i class="m-menu__ver-arrow la la-angle-right"></i>
-											</a>
-											<div class="m-menu__submenu ">
-												<span class="m-menu__arrow"></span>
-												<ul class="m-menu__subnav">
-													<li class="m-menu__item " aria-haspopup="true" >
-														<a  href="components/base/tabs/bootstrap.html" class="m-menu__link ">
-															<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="m-menu__link-text">
-																Bootstrap Tabs
-															</span>
-														</a>
-													</li>
-													<li class="m-menu__item " aria-haspopup="true" >
-														<a  href="components/base/tabs/line.html" class="m-menu__link ">
-															<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="m-menu__link-text">
-																Line Tabs
-															</span>
-														</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/accordions.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Accordions
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/navs.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Navs
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/lists.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Lists
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/treeview.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Tree View
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/bootstrap-notify.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Bootstrap Notify
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/toastr.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													Toastr
-												</span>
-											</a>
-										</li>
-										<li class="m-menu__item " aria-haspopup="true" >
-											<a  href="components/base/sweetalert2.html" class="m-menu__link ">
-												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="m-menu__link-text">
-													SweetAlert2
+													Add Testmonial
 												</span>
 											</a>
 										</li>
 									</ul>
 								</div>
-							</li> -->
+							</li>
 						</ul>
 					<!-- END: Aside Menu -->
