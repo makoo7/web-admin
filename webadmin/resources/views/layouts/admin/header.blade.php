@@ -17,7 +17,7 @@
 									<!-- END -->
 							<!-- BEGIN: Responsive Aside Left Menu Toggler -->
 									<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
-										<span></span>
+										<span></span> 
 									</a>
 									<!-- END -->
 							<!-- BEGIN: Responsive Header Menu Toggler -->
