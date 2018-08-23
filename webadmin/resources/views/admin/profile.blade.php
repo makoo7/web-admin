@@ -168,7 +168,7 @@
 											</div>
 											<div class="m-card-profile__pic">
 												<div class="m-card-profile__pic-wrapper">
-													<img src="assets/app/media/img/users/user4.jpg" alt=""/>
+													<img src="{{ asset('admin/assets/app/media/img/users/user4.jpg') }}" alt=""/>
 												</div>
 											</div>
 											<div class="m-card-profile__details">
@@ -188,7 +188,7 @@
 												</span>
 											</li>
 											<li class="m-nav__item">
-												<a href="/profile" class="m-nav__link">
+												<a href="/admin/profile" class="m-nav__link">
 													<i class="m-nav__link-icon flaticon-profile-1"></i>
 													<span class="m-nav__link-title">
 														<span class="m-nav__link-wrap">

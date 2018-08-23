@@ -23,8 +23,8 @@
 		</script>
 		<!--end::Web font -->
         <!--begin::Base Styles -->
-		<link href="{{ asset('assets/vendors/base/vendors.bundle.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('assets/demo/default/base/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('admin/assets/vendors/base/vendors.bundle.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('admin/assets/demo/default/base/style.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Base Styles -->
     </head>
         <body class="m--skin- m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
@@ -32,11 +32,11 @@
             @yield('content')
 
         <!--begin::Base Scripts -->
-		<script src="{{ asset('assets/vendors/base/vendors.bundle.js') }}" type="text/javascript"></script>
-		<script src="{{ asset('assets/demo/default/base/scripts.bundle.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('admin/assets/vendors/base/vendors.bundle.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('admin/assets/demo/default/base/scripts.bundle.js') }}" type="text/javascript"></script>
 		<!--end::Base Scripts -->   
         <!--begin::Page Snippets -->
-		<script src="{{ asset('assets/snippets/pages/user/login.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('admin/assets/snippets/pages/user/login.js') }}" type="text/javascript"></script>
         <!--end::Page Snippets -->
         
         </body>

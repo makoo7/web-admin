@@ -25,6 +25,15 @@
 				<!-- END: Left Aside -->
                 
                 <div class="m-grid__item m-grid__item--fluid m-wrapper">
+					<div>&nbsp;</div>
+					<div class="col-lg-10">
+						@if(isset($response))
+						<div class="alert alert-success">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+							<strong>Success!</strong> Data Inserted successful.
+						</div>
+						@endif
+					</div>
 					<!-- BEGIN: Subheader -->
 					<div class="m-subheader ">
 						<div class="d-flex align-items-center">
@@ -40,6 +49,43 @@
 
                         <div class="row">
 							<div class="col-xl-12 col-lg-12">
+
+							<form class="m-login__form m-form" method="POST" action="{{ route('testmonials') }}">
+                                {{ csrf_field() }}
+								<div class="form-group m-form__group{{ $errors->has('name') ? ' has-error' : '' }}">
+									<label>Name</label>
+									<input class="form-control m-input"  id="name" type="text" name="name" value="{{ old('name') }}" required>
+                                    
+                                    @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+								<div class="form-group m-form__group{{ $errors->has('description') ? ' has-error' : '' }}">
+									<label>Description</label>
+									<textarea class="form-control m-input" id="description" require name="description"></textarea>		
+                                    @if ($errors->has('description'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('description') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+								<div class="row m-login__form-sub">
+									<!-- <div class="col m--align-left m-login__form-left">
+										<label class="m-checkbox  m-checkbox--light">
+											<input type="checkbox" name="remember">
+											Remember me
+											<span></span>
+										</label>
+									</div> --> <!-- id="m_login_signin_submit" -->
+								</div>
+								<div class="m-login__form-action">
+									<button type="submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air  m-login__btn">
+										Add Testmonial
+									</button>
+								</div>
+							</form>
 								
 							</div>
 						</div>

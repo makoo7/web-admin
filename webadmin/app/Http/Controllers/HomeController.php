@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Testmonial;
+use Redirect;
 
 class HomeController extends Controller
 {
@@ -47,6 +49,20 @@ class HomeController extends Controller
         return view('admin.testmonial.index');
     }
     public function AddTestmonials(Request $request){
+        
+        if(count($request->all()) > 0){
+            $request = $request->all();
+            $save = Testmonial::create($request);
+            
+            if($save){
+                return Redirect::back()->with('response',1);
+                // return view('admin.testmonial.add',['response' => 1]);
+            }else{
+                // return view('admin.testmonial.add',['response' => 0]);
+                return Redirect::back()->with('response',0);
+            }
+
+        } 
         return view('admin.testmonial.add');
     }
 }
