@@ -46,7 +46,11 @@ class HomeController extends Controller
     }
 
     public function Testmonials(Request $request){
-        return view('admin.testmonial.index');
+
+        $testmonials = Testmonial::where('status',1)
+        ->get()->toArray();
+        
+        return view('admin.testmonial.index',['data' => $testmonials]);
     }
     public function AddTestmonials(Request $request){
         
@@ -56,13 +60,12 @@ class HomeController extends Controller
             
             if($save){
                 return Redirect::back()->with('response',1);
-                // return view('admin.testmonial.add',['response' => 1]);
             }else{
-                // return view('admin.testmonial.add',['response' => 0]);
                 return Redirect::back()->with('response',0);
             }
 
         } 
         return view('admin.testmonial.add');
     }
+
 }

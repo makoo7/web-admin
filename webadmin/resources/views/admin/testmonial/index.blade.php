@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <!-- begin:: Page -->
 <div class="m-grid m-grid--hor m-grid--root m-page">
             <!-- Header Content Begins -->
@@ -32,7 +33,7 @@
 								<h3 class="m-subheader__title ">
 									Testmonials
 								</h3>
-                                <a href="/testmonials/add" class="btn btn-primary">Add Testmonial</a>
+                                <a href="/admin/testmonials/add" class="btn btn-primary">Add Testmonial</a>
 							</div>
 						</div>
 					</div>
@@ -41,18 +42,49 @@
 
                         <div class="row">
 							<div class="col-xl-12 col-lg-12">
-								
-							</div>
-						</div>
-					</div>
-					
+								{{-- \Log::info($data) --}}
+								<table id="example11"  class="table" style="width:100%">
+        <thead  class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+		   @if(count($data) > 0)
+		   @foreach($data as $obj)
+            <tr>
+                <td>{{ $obj['name'] }}</td>
+                <td>{{ $obj['description'] }}</td>
+                <td>
+					<a href="/admin/testmonials/edit/{{ $obj['id'] }}" class="btn btn-primary">Edit</a>
+					<a href="/admin/testmonials/add" class="btn btn-success">Status</a>
+				</td>
+            </tr>
+			@endforeach
+			@else
+			<tr>
+                <td colspan="3" class="text-center">
+					<h5>No Records</h5>
+				</td>
+            </tr>
+			@endif
+            
+        </tbody>
+    </table>
+
 				</div>
-                
 			</div>
+		</div>
+		
+	</div>
+	
+</div>
             
             
 			<footer class="m-grid__item		m-footer " id="footer-content">
-                    @include('./layouts.admin.footer')
+				    @include('./layouts.admin.footer')
             </footer>
 		</div>
 <!-- end:: Page -->

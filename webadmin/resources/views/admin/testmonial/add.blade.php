@@ -27,7 +27,7 @@
                 <div class="m-grid__item m-grid__item--fluid m-wrapper">
 					<div>&nbsp;</div>
 					<div class="col-lg-10">
-						@if(isset($response))
+						@if(session()->has('response'))
 						<div class="alert alert-success">
 							<a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
 							<strong>Success!</strong> Data Inserted successful.
