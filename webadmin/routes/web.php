@@ -35,8 +35,15 @@ Route::get('/home', function () {
 });
 Route::get('admin/home', array('as'=>'home', 'uses'=>'HomeController@index'));
 Route::any('admin/profile', array('as'=>'profile', 'uses'=>'HomeController@profile'));
+
 Route::any('admin/testmonials', array('as'=>'testmonials', 'uses'=>'HomeController@Testmonials'));
 Route::any('admin/testmonials/add', array('as'=>'testmonials', 'uses'=>'HomeController@AddTestmonials'));
+Route::any('admin/testmonials/edit/{id}', array('as'=>'testmonials.edit', 'uses'=>'HomeController@EditTestmonials'));
+Route::get('admin/testmonials/status/{id}/{status}', array('as'=>'testmonials.status', 'uses'=>'HomeController@StatusTestmonials'));
+
+Route::any('admin/slider', array('as'=>'sliders', 'uses'=>'HomeController@SliderList'));
+Route::any('admin/slider/add', array('as'=>'sliders', 'uses'=>'HomeController@AddHeroSlider'));
+
 
 Route::group(['middleware' => ['admin']], function () {
 

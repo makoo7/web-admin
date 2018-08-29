@@ -31,9 +31,9 @@
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title ">
-									Testmonials
+									Hero-Slider
 								</h3>
-                                <a href="/admin/testmonials/add" class="btn btn-primary">Add Testmonial</a>
+                                <a href="/admin/slider/add" class="btn btn-primary">Add Hero-Slider</a>
 							</div>
 						</div>
 					</div>

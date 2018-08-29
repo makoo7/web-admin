@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <!-- begin:: Page -->
 <div class="m-grid m-grid--hor m-grid--root m-page">
             <!-- Header Content Begins -->
@@ -26,14 +25,22 @@
 				<!-- END: Left Aside -->
                 
                 <div class="m-grid__item m-grid__item--fluid m-wrapper">
+					<div>&nbsp;</div>
+					<div class="col-lg-10">
+						@if(session()->has('response'))
+						<div class="alert alert-success">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+							<strong>Success!</strong> Data Inserted successful.
+						</div>
+						@endif
+					</div>
 					<!-- BEGIN: Subheader -->
 					<div class="m-subheader ">
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
 								<h3 class="m-subheader__title ">
-									Testmonials
+								    Add	Hero-Slider
 								</h3>
-                                <a href="/admin/testmonials/add" class="btn btn-primary">Add Testmonial</a>
 							</div>
 						</div>
 					</div>
@@ -42,52 +49,37 @@
 
                         <div class="row">
 							<div class="col-xl-12 col-lg-12">
-								{{-- \Log::info($data) --}}
-								<table id="example11"  class="table" style="width:100%">
-        <thead  class="thead-dark">
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-		   @if(count($data) > 0)
-		   @foreach($data as $obj)
-            <tr>
-                <td>{{ $obj['name'] }}</td>
-                <td>{{ $obj['description'] }}</td>
-                <td>
-					<a href="/admin/testmonials/edit/{{ $obj['id'] }}" class="btn btn-primary">Edit</a>
-					<a href="/admin/testmonials/status/{{ $obj['id'] }}/{{ ($obj['status'] == 1) ? 0 : 1 }}" class="btn {{ ($obj['status'] == 1) ? 'btn-danger' : 'btn-success' }}">{{ ($obj['status'] == 1) ? 'Deactive' : 'Active' }}</a>
-					<form id="logout-form" action="{{ route('testmonials.status', ['id' => $obj['id'], 'status' => ($obj['status'] == 1) ? 0 : 1 ]) }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-				</td>
-            </tr>
-			@endforeach
-			@else
-			<tr>
-                <td colspan="3" class="text-center">
-					<h5>No Records</h5>
-				</td>
-            </tr>
-			@endif
-            
-        </tbody>
-    </table>
 
+							<form class="m-login__form m-form" method="POST" enctype="multipart/form-data" action="{{ route('sliders') }}">
+                                {{ csrf_field() }}
+								<div class="form-group m-form__group{{ $errors->has('link') ? ' has-error' : '' }}">
+									<label>Hero-Image</label>
+									<input class="form-control m-input"  id="link" type="file" name="link" required>
+                                    
+                                    @if ($errors->has('link'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('link') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+								<div class="m-login__form-action">
+									<button type="submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air  m-login__btn">
+										Add Hero-Slider
+									</button>
+								</div>
+							</form>
+								
+							</div>
+						</div>
+					</div>
+					
 				</div>
+                
 			</div>
-		</div>
-		
-	</div>
-	
-</div>
             
             
 			<footer class="m-grid__item		m-footer " id="footer-content">
-				    @include('./layouts.admin.footer')
+                    @include('./layouts.admin.footer')
             </footer>
 		</div>
 <!-- end:: Page -->

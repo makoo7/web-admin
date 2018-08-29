@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Testmonial;
+use App\HeroSlider;
 use Redirect;
 
 class HomeController extends Controller
@@ -47,8 +48,7 @@ class HomeController extends Controller
 
     public function Testmonials(Request $request){
 
-        $testmonials = Testmonial::where('status',1)
-        ->get()->toArray();
+        $testmonials = Testmonial::get()->toArray();
         
         return view('admin.testmonial.index',['data' => $testmonials]);
     }
@@ -66,6 +66,70 @@ class HomeController extends Controller
 
         } 
         return view('admin.testmonial.add');
+    }
+
+    public function EditTestmonials(Request $request,$id){
+       
+        if($id != null && $id != ""){
+            $data = Testmonial::where('id',$id)
+            ->first();
+        }else{
+            return redirect('admin/testmonials');
+        }
+        if(count($request->all()) > 0){
+            $request = $request->all();
+            $data = Testmonial::where('id',$id)
+                    ->update(['name' => $request['name'], 'description' => $request['description']]);
+            return Redirect::back()->with('response',1);
+
+        } 
+        return view('admin.testmonial.edit',['id' => $id, 'data' => $data]);
+
+    }
+
+    public function StatusTestmonials($id, $status){
+        if($id != "" && $status != ""){
+            $data = Testmonial::where('id',$id)
+                    ->update(['status' => $status]);
+            return Redirect::back()->with('response',1);
+        }
+
+    }
+
+    public function SliderList(Request $request){
+        $HeroSlider = HeroSlider::get()->toArray();
+        return view('admin.slider.index',['data' => $HeroSlider]);
+    }
+
+    public function AddHeroSlider(Request $request){
+        if(count($request->all()) > 0){
+            $file = $request->file('link');
+
+                //Display File Name
+            echo 'File Name: '.$file->getClientOriginalName();
+            echo '<br>';
+
+            //Display File Extension
+            echo 'File Extension: '.$file->getClientOriginalExtension();
+            echo '<br>';
+
+            //Display File Real Path
+            echo 'File Real Path: '.$file->getRealPath();
+            echo '<br>';
+
+            //Display File Size
+            echo 'File Size: '.$file->getSize();
+            echo '<br>';
+
+            //Display File Mime Type
+            echo 'File Mime Type: '.$file->getMimeType();
+            
+            \Log::info($file);
+
+        }else{
+
+        }
+        return view('admin.slider.add');
     }
 
 }
